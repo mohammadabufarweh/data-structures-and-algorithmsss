@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="AppTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2021-08-09T05:09:04" hostname="DESKTOP-BOK46SC" time="0.008">
+  <properties/>
+  <testcase name="append" classname="AppTest" time="0.004"/>
+  <testcase name="insertAfterTest" classname="AppTest" time="0.0"/>
+  <testcase name="includeTest" classname="AppTest" time="0.0"/>
+  <testcase name="linkedListZipTest" classname="AppTest" time="0.0"/>
+  <testcase name="toStringTest" classname="AppTest" time="0.0"/>
+  <testcase name="inserBeforTest" classname="AppTest" time="0.0"/>
+  <testcase name="linkedListZipTestIfListOneLessThanTwo" classname="AppTest" time="0.001"/>
+  <testcase name="testAppHasAGreeting" classname="AppTest" time="0.001"/>
+  <testcase name="kthValueTest" classname="AppTest" time="0.0"/>
+  <testcase name="insertTest" classname="AppTest" time="0.0"/>
+  <testcase name="linkedListZipTestIfListTwoLessThanone" classname="AppTest" time="0.0"/>
+  <system-out><![CDATA[6
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
