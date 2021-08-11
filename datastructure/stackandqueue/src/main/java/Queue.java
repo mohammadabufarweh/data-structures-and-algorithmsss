@@ -38,15 +38,18 @@ public class Queue <T> {
 }
     @Override
     public String toString() {
-        if (front == null) return "null";
-        String list = " Front -->";
-        Node<T> currentNode = front;
-        while (currentNode != null){
-            list =list+  " \"{ " + currentNode.value + " } -> \" ";
-            currentNode = currentNode.next;
+        if (front == null) {
+            return "null";
+        }else {
+            String list = " Front -->";
+            Node<T> currentNode = front;
+            while (currentNode != null) {
+                list = list + " { " + currentNode.value + " } ->  ";
+                currentNode = currentNode.next;
+            }
+            list += "Rear";
+            return list;
         }
-        list += "Rear";
-        return list;
     }
 
 }
