@@ -31,14 +31,18 @@ public class Stack <T> {
     }
     @Override
     public String toString() {
-        if (top == null) return "null";
-        String list = "Top --> ";
-        Node<T> currentNode = top;
-        while (currentNode != null){
-            list =list+  " \"{ " + currentNode.value + " } --> \" ";
-            currentNode = currentNode.next;
+        if (top == null){
+            return "null";
+        }else{
+            String list = "Top --> ";
+            Node<T> currentNode = top;
+            while (currentNode != null){
+                list =list+  " { " + currentNode.value + " } --> ";
+                currentNode = currentNode.next;
+            } list += "Null";
+            return list;
         }
-        list += "Null";
-        return list;
+
+
     }
 }
