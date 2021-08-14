@@ -21,21 +21,33 @@ public class Queue <T> {
     }
 
   public T dequeue(){
+      if (isEmpty()) try {
+          throw new Exception(" Queue is Empty ");
+      } catch (Exception e) {
+          e.printStackTrace();
+          return null;
+      }
+      Node t = front;
         if (!isEmpty()){
-            Node t = front;
             front = front.next;
             t.next = null;
             return (T) t.value;
-        }else{
-            throw new EmptyStackException();
         }
+      return (T) t.value;
   }
     public T  peek(){
+        if (isEmpty()) try {
+            throw new Exception(" Queue is Empty ");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
         if (!isEmpty()){
             return front.value;
         }
-    throw new EmptyStackException();
-}
+        return front.value;
+
+    }
     @Override
     public String toString() {
         if (front == null) {

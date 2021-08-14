@@ -11,16 +11,24 @@ public class App {
 
         System.out.println("------------------Stack------------------");
         Stack<Integer> sl = new Stack<>();
+        Stack<Integer> ssl = new Stack<>();
+//        Stack<Character> sls = new Stack<>();
         sl.push(1);
         sl.push(2);
         sl.push(3);
         sl.push(4);
+//        sls.pushChacr('s');
+//        sls.pushChacr('a');
+
+
         System.out.println("------------------push Stack------------------");
         System.out.println(sl );
         System.out.println("------------------pop Stack------------------");
         sl.pop();
-        System.out.println(sl);
+//        ssl.pop();
+//        System.out.println(ssl);
         System.out.println("------------------peek Stack------------------");
+        System.out.println(sl.peek());
         System.out.println(sl.peek());
         System.out.println("------------------isempty Stack------------------");
         System.out.println(sl.isEmpty());
@@ -37,12 +45,12 @@ public class App {
         System.out.println("-------------------dequeue------------------");
         ql.dequeue();
         System.out.println(ql);
-        System.out.println("------------------peek------------------");
+        System.out.println("------------------peeks------------------");
         System.out.println(ql.peek());
         System.out.println("------------------isempty--------------------");
         System.out.println(ql.isEmpty());
         System.out.println("-------------------------------------------");
-        System.out.println("------------------Pseudo--------------------");
+        System.out.println("------------------pseudo-----------------");
         System.out.println("-------------------------------------------");
 
         Pseudo pseudo = new Pseudo();
@@ -55,5 +63,24 @@ public class App {
         pseudo.dequeue();
         System.out.println("------------------dequeue--------------------");
         System.out.println(pseudo.stack1.toString());
+
+        System.out.println("-------------------------------------------");
+        System.out.println("------------------ValidateBrackets-----------------");
+        System.out.println("-------------------------------------------");
+        ValidateBrackets validateBrackets=new ValidateBrackets();
+        String bracketssss = "{{}}()[()]{";
+        String bracketsss = "{{}}()[()]";
+        String bracketss= "(][)";
+        String brackets = ")";
+        String b="{(}}([[";
+        String p="{{{}}}((()))[[[[]]]]";
+        System.out.println(ValidateBrackets.validateBrackets(bracketssss)) ;
+        System.out.println(ValidateBrackets.validateBrackets(bracketsss)) ;
+        System.out.println(ValidateBrackets.validateBrackets(bracketss)) ;
+        System.out.println(ValidateBrackets.validateBrackets(brackets)) ;
+        System.out.println(ValidateBrackets.validateBrackets(b)) ;
+        System.out.println(ValidateBrackets.validateBrackets(p)) ;
+
+
     }
 }
