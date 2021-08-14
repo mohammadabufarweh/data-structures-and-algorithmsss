@@ -1,6 +1,3 @@
-import java.util.EmptyStackException;
-
-
 public class Stack <T> {
     Node<T> top;
     public void push(T value){
@@ -8,20 +5,48 @@ public class Stack <T> {
         addedNode.next = top;
         top = addedNode;
     }
-    public T pop(){
-        if (!isEmpty()){
-            Node<T> t = top;
-            top=t.next;
+    Node<Character> topChar;
+    public Character pushChacr(char value){
+        Node<Character> addedNode = new Node<Character>(value);
+        addedNode.next = topChar;
+        topChar = addedNode;
+        return addedNode.value;
+    }
+
+    public T pop() {
+        if (isEmpty()) try {
+            throw new Exception(" Stack is Empty ");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+        Node<T> t = top;
+        if (!isEmpty()) {
+
+            top = t.next;
             return t.value;
         }
-        throw new EmptyStackException();
+        return t.value;
+    }
+
+    public Character popChar(){
+        Node<Character> tt = topChar;
+            topChar=tt.next;
+        return tt.value;
 
     }
+
     public T peek(){
+        if (isEmpty()) try {
+            throw new Exception(" Stack is Empty ");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
         if(!isEmpty()) {
             return top.value;
         }
-        throw new EmptyStackException();
+        return top.value;
 }
     public boolean isEmpty(){
         if (top == null){
