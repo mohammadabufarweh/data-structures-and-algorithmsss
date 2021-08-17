@@ -17,18 +17,31 @@ public class App {
         tree.root.right = new Node(30);
         tree.root.left.left = new Node(3);
         tree.root.left.right = new Node(7);
-
+        System.out.println("----------preOrder--------");
         System.out.println(tree.preOrder(tree.root));
         System.out.println(tree.inOrder(tree.root));
         System.out.println(tree.postOrder(tree.root));
+        System.out.println(tree.toString());
 
-//        ArrayList<Integer> al=new ArrayList<Integer>();
-//        al.add(1);
-//        al.add(2);
-//        al.add(3);
-//        al.add(4);
-//        al.add(5);
-//        binaryTree.preOrder(,al);
+
+        BinarySearchTree treee = new BinarySearchTree();
+        treee.root = new Node(10);
+//        treee.root.left = new Node(5);
+//        treee.root.right = new Node(30);
+//        treee.root.left.left = new Node(3);
+//        treee.root.left.right = new Node(7);
+//        treee.add( 30);
+//        treee.add( 7);
+//        treee.add( 3);
+          treee.add( 40);
+          treee.add(5);
+//          treee.add( 3);
+        System.out.println(treee.postOrder(treee.root));
+        System.out.println(treee.toString());
+
+        System.out.println(treee.contain(treee.root, 10));
+
 
     }
+
 }
