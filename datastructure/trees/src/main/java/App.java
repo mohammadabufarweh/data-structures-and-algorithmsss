@@ -40,7 +40,13 @@ public class App {
         treeMaximum.root.right = new Node(3330);
         treeMaximum.root.left.left = new Node(3);
         treeMaximum.root.left.right = new Node(7);
+        treeMaximum.root.left.left.left= new Node(3);
+        treeMaximum.root.left.right.left = new Node(9);
+        System.out.println("----------treeMaxValue--------");
         System.out.println(treeMaximum.treeMaxValue(treeMaximum.root));
+        System.out.println("----------breadthFirst--------");
+        System.out.println(treeMaximum.breadthFirst(treeMaximum.root));
+
     }
 
 }
