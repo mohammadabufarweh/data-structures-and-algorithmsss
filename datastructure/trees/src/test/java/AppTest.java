@@ -3,6 +3,9 @@
  */
 
 import org.junit.Test;
+
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.*;
 public class AppTest {
@@ -64,7 +67,20 @@ assertEquals("BinaryTree{preOrderstoredArray=[10, 5, 3, 7, 30], inorderStoredArr
         BinarySearchTree treee = new BinarySearchTree();
         treee.root = new Node(10);
         treee.add( 40);
-//        treee.add(5);
+
         assertEquals("[40, 10]",treee.postOrder(treee.root).toString());
     }
+    @Test public void treeMaxValueTest(){
+        BinaryTree treeMaximum = new BinaryTree();
+        treeMaximum.root = new Node(10);
+        treeMaximum.root.left = new Node(53);
+        treeMaximum.root.right = new Node(3330);
+        treeMaximum.root.left.left = new Node(3);
+        treeMaximum.root.left.right = new Node(7);
+        treeMaximum.treeMaxValue(treeMaximum.root);
+        ArrayList test=new ArrayList();
+        test.add(treeMaximum.treeMaxValue(treeMaximum.root));
+        assertEquals("[3330]",test.toString());
+    }
+
 }

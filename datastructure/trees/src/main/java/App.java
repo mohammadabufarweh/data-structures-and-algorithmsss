@@ -26,14 +26,7 @@ public class App {
 
         BinarySearchTree treee = new BinarySearchTree();
         treee.root = new Node(10);
-//        treee.root.left = new Node(5);
-//        treee.root.right = new Node(30);
-//        treee.root.left.left = new Node(3);
-//        treee.root.left.right = new Node(7);
-//        treee.add( 30);
-//        treee.add( 7);
-//        treee.add( 3);
-          treee.add( 40);
+          treee.add(40);
           treee.add(5);
 //          treee.add( 3);
         System.out.println(treee.postOrder(treee.root));
@@ -41,7 +34,13 @@ public class App {
 
         System.out.println(treee.contain(treee.root, 10));
 
-
+        BinaryTree treeMaximum = new BinaryTree();
+        treeMaximum.root = new Node(10);
+        treeMaximum.root.left = new Node(53);
+        treeMaximum.root.right = new Node(3330);
+        treeMaximum.root.left.left = new Node(3);
+        treeMaximum.root.left.right = new Node(7);
+        System.out.println(treeMaximum.treeMaxValue(treeMaximum.root));
     }
 
 }

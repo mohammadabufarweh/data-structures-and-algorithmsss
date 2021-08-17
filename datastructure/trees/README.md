@@ -1,7 +1,7 @@
 # Trees
 <!-- Short summary or background information -->
 
-## Challenge
+## Challenge 15
 **Binary Tree**
 
 - Create a Binary Tree class
@@ -36,4 +36,12 @@ All the methods take O(n)
 
 
 **Searching a BST**
+
 - Searching a BST can be done quickly, because all you do is compare the node you are searching for against the root of the tree or sub-tree. If the value is smaller, you only traverse the left side. If the value is larger, you only traverse the right side.
+
+
+
+# Challenge 16
+**Tee-max**
+
+![ee](codechallenge16.jpg)
