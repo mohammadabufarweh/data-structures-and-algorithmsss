@@ -47,6 +47,30 @@ List <T> preOrderstoredArray=new ArrayList<>();
       return postOrderstoredArray;
     }
 
+    public int treeMaxValue(Node root){
+        if(root == null) {
+            System.out.println("Tree is empty");
+            return 0;
+        }
+        else{
+            int leftMax;
+            int rightMax;
+            int max = (int) root.value;
+            if(root.left != null){
+                leftMax = treeMaxValue(root.left);
+                if(max<leftMax){
+                    max=leftMax;
+                }
+            }
+            if(root.right != null){
+                rightMax = treeMaxValue(root.right);
+                if(max<rightMax){
+                    max=rightMax;
+                }
+            }
+            return max;
+        }
+    }
     @Override
     public String toString() {
         return "BinaryTree{" +
