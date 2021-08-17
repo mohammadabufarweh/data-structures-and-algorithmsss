@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 public class BinaryTree <T>  {
     Node root;
@@ -69,6 +71,30 @@ List <T> preOrderstoredArray=new ArrayList<>();
                 }
             }
             return max;
+        }
+    }
+
+
+    public ArrayList<Integer> breadthFirst(Node root ){
+        Queue<Node> breadthFistQueue = new LinkedList<Node>();
+        ArrayList<Integer> breadthFirstStoredArray = new ArrayList<Integer>();
+        if(root == null){
+           return null;
+        }else{
+            breadthFistQueue.add(root);
+            breadthFirstStoredArray.add((Integer)root.value);
+            while(!breadthFistQueue.isEmpty()){
+                Node saved = breadthFistQueue.remove();
+                if(saved.left!=null){
+                    breadthFistQueue.add(saved.left);
+                    breadthFirstStoredArray.add((Integer)saved.left.value);
+                }
+                if(saved.right!=null){
+                    breadthFistQueue.add(saved.right);
+                    breadthFirstStoredArray.add((Integer)saved.right.value);
+                }
+            }
+            return breadthFirstStoredArray;
         }
     }
     @Override

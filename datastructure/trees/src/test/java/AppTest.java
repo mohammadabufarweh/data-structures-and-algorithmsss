@@ -77,10 +77,21 @@ assertEquals("BinaryTree{preOrderstoredArray=[10, 5, 3, 7, 30], inorderStoredArr
         treeMaximum.root.right = new Node(3330);
         treeMaximum.root.left.left = new Node(3);
         treeMaximum.root.left.right = new Node(7);
+
         treeMaximum.treeMaxValue(treeMaximum.root);
         ArrayList test=new ArrayList();
         test.add(treeMaximum.treeMaxValue(treeMaximum.root));
         assertEquals("[3330]",test.toString());
     }
-
+    @Test public void breadthFirst(){
+        BinaryTree treeMaximum = new BinaryTree();
+        treeMaximum.root = new Node(10);
+        treeMaximum.root.left = new Node(53);
+        treeMaximum.root.right = new Node(3330);
+        treeMaximum.root.left.left = new Node(3);
+        treeMaximum.root.left.right = new Node(7);
+        treeMaximum.root.left.left.left= new Node(3);
+        treeMaximum.root.left.right.left = new Node(9);
+        assertEquals("[10, 53, 3330, 3, 7, 3, 9]",treeMaximum.breadthFirst(treeMaximum.root).toString());
+    }
 }
