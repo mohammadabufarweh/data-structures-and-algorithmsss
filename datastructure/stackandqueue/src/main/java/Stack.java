@@ -1,9 +1,13 @@
-public class Stack <T> {
+public class Stack <T>  {
+
     Node<T> top;
+
     public void push(T value){
+
         Node<T> addedNode = new Node<T>(value);
         addedNode.next = top;
         top = addedNode;
+
     }
     Node<Character> topChar;
     public Character pushChacr(char value){

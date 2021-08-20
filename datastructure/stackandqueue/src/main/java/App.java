@@ -52,13 +52,18 @@ public class App {
         System.out.println("-------------------------------------------");
         System.out.println("------------------pseudo-----------------");
         System.out.println("-------------------------------------------");
-
+        Stack<Integer> slq = new Stack<>();
+        slq.push(1);
+        slq.push(2);
+        slq.push(3);
+        slq.push(4);
         Pseudo pseudo = new Pseudo();
         pseudo.enqueue(1);
         pseudo.enqueue(2);
         pseudo.enqueue(3);
         pseudo.enqueue(4);
         System.out.println("------------------enqueue--------------------");
+//        System.out.println(pseudo.);
         System.out.println(pseudo.stack1.toString());
         pseudo.dequeue();
         System.out.println("------------------dequeue--------------------");
@@ -72,14 +77,40 @@ public class App {
         String bracketsss = "{{}}()[()]";
         String bracketss= "(][)";
         String brackets = ")";
-        String b="{(}}([[";
+        String b="{(})";
         String p="{{{}}}((()))[[[[]]]]";
-        System.out.println(ValidateBrackets.validateBrackets(bracketssss)) ;
-        System.out.println(ValidateBrackets.validateBrackets(bracketsss)) ;
-        System.out.println(ValidateBrackets.validateBrackets(bracketss)) ;
-        System.out.println(ValidateBrackets.validateBrackets(brackets)) ;
-        System.out.println(ValidateBrackets.validateBrackets(b)) ;
-        System.out.println(ValidateBrackets.validateBrackets(p)) ;
+        String oo="{(})";
+        System.out.println(ValidateBrackets.validateBrackets(oo)) ;
+//        System.out.println(ValidateBrackets.validateBrackets(bracketsss)) ;
+//        System.out.println(ValidateBrackets.validateBrackets(bracketss)) ;
+//        System.out.println(ValidateBrackets.validateBrackets(brackets)) ;
+//        System.out.println(ValidateBrackets.validateBrackets(b)) ;
+//        System.out.println(ValidateBrackets.validateBrackets(p)) ;
+        System.out.println("-------------------------------------------");
+        System.out.println("------------------Animal-----------------");
+        System.out.println("-------------------------------------------");
+        Cat cat1 = new Cat("sheraz");
+        Cat cat2 = new Cat("shahenaz");
+        Cat cat3 = new Cat("zaza");
+        Dog dog1 = new Dog("mosha3'eb");
+        Dog dog2 = new Dog("molakem");
+        Dog dog3 = new Dog("kalb");
+        AnimalShelter as = new AnimalShelter();
+        as.animals.toString();
+        as.enqueue(cat1);
+        as.enqueue(cat2);
+        as.enqueue(cat3);
+        as.enqueue(dog1);
+        as.enqueue(dog2);
+        as.enqueue(dog3);
+        System.out.println("------------------enqueue--------------------");
+        System.out.println(as.animals.toString());
+        System.out.println("------------------dequeue neither cat and dogs---------------");
+        System.out.println(as.dequeue("lion shamshom"));
+        System.out.println("------------------dequeue--------------------");
+        System.out.println(as.dequeue("cat"));
+        System.out.println("------------------dequeue--------------------");
+        System.out.println(as.animals.toString());
 
 
     }

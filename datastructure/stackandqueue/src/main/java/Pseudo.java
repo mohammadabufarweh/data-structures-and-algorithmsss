@@ -2,12 +2,12 @@ public class Pseudo <T> {
     public Stack<T> stack1 = new Stack<T>();
     public Stack<T> stack2 = new Stack<>();
 
-    public String enqueue(T value){
-if(stack1.isEmpty()){
-    return null;
-}
+    public void enqueue(T value){
+//        if(stack1.isEmpty()){
+//       return null;
+//}
     stack1.push(value);
-        return null;
+
     }
     public Object dequeue(){
         if (stack1.isEmpty() && stack2.isEmpty()) {

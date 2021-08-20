@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-14T19:18:52" hostname="DESKTOP-BOK46SC" time="0.013">
+<testsuite name="AppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-20T01:10:45" hostname="DESKTOP-BOK46SC" time="0.014">
   <properties/>
-  <testcase name="validateBracketTruCaseWithWordsInBrackets" classname="AppTest" time="0.013"/>
+  <testcase name="catsAndDogsDequeue" classname="AppTest" time="0.014"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
