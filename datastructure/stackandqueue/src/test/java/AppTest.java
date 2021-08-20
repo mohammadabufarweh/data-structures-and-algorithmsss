@@ -127,6 +127,7 @@ public class AppTest {
         pseudo.enqueue(2);
         pseudo.enqueue(3);
         pseudo.enqueue(4);
+
         assertEquals("Top -->  { 4 } -->  { 3 } -->  { 2 } -->  { 1 } --> Null",pseudo.toString());
     }
     @Test public void pseudoDequeue(){
@@ -166,5 +167,40 @@ public class AppTest {
         ValidateBrackets validateBrackets=new ValidateBrackets();
         String bracketssss = "{{}}()[(khklj)]";
         assertEquals("true",ValidateBrackets.validateBrackets(bracketssss).toString());
+    }
+    @Test public void catsAndDogs(){
+        Cat cat1 = new Cat("sheraz");
+        Cat cat2 = new Cat("shahenaz");
+        Cat cat3 = new Cat("zaza");
+        Dog dog1 = new Dog("mosha3'eb");
+        Dog dog2 = new Dog("molakem");
+        Dog dog3 = new Dog("kalb");
+        AnimalShelter as = new AnimalShelter();
+        as.animals.toString();
+        as.enqueue(cat1);
+        as.enqueue(cat2);
+        as.enqueue(cat3);
+        as.enqueue(dog1);
+        as.enqueue(dog2);
+        as.enqueue(dog3);
+        assertEquals(" Front --> { Cat: sheraz } ->   { Cat: shahenaz } ->   { Cat: zaza } ->   { Dog: mosha3'eb } ->   { Dog: molakem } ->   { Dog: kalb } ->  Rear",as.animals.toString());
+    }
+    @Test public void catsAndDogsDequeue(){
+        Cat cat1 = new Cat("sheraz");
+        Cat cat2 = new Cat("shahenaz");
+        Cat cat3 = new Cat("zaza");
+        Dog dog1 = new Dog("mosha3'eb");
+        Dog dog2 = new Dog("molakem");
+        Dog dog3 = new Dog("kalb");
+        AnimalShelter as = new AnimalShelter();
+        as.animals.toString();
+        as.enqueue(cat1);
+        as.enqueue(cat2);
+        as.enqueue(cat3);
+        as.enqueue(dog1);
+        as.enqueue(dog2);
+        as.enqueue(dog3);
+        as.dequeue("cat");
+        assertEquals(" Front --> { Cat: shahenaz } ->   { Cat: zaza } ->   { Dog: mosha3'eb } ->   { Dog: molakem } ->   { Dog: kalb } ->  Rear",as.animals.toString());
     }
 }

@@ -33,6 +33,20 @@ peek : O(1)
 # Code Challenge 11
 ![7](./codechallenge11.jpg)
 
+# code challenge 12
+
+
+
+![s](codechallenge14.jpg)
+Approach & Efficiency
+
+the complexity for the :
+
+    enqueue : time > O(1) 
+              space> O(1)
+    dequeue : time > O(1) 
+                space> O(1)
+
 # Code Challenge 13
 
 ![7](./codechallenge13.jpg)
