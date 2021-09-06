@@ -1,9 +1,13 @@
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
+
 
 public class HashTable <T>{
     Node[] arr;
     int size;
+    HashTable h;
     public HashTable(int size){
         this.size=size;
         arr=new Node[size];
