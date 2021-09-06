@@ -12,3 +12,8 @@
 - all function take O(1) time.
 
 - This hash table will implement separate chaining as the method to deal with collisions. Separate chaining involves storing entries in the hashtable in an array of linked lists so that even if a collision was to happen, the entry would just be added on to the linked list at that index of the array.
+
+
+# Challenge 31
+
+![codechallenge31.jpg](./codechallenge31.jpg)
