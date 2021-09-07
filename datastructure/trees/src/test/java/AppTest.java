@@ -18,7 +18,7 @@ public class AppTest {
         tree.root=null;
      assertEquals("BinaryTree{preOrderstoredArray=[], inorderStoredArray=[], postOrderstoredArray=[]}",tree.toString());
   }
-@Test public void singleRootNode(){
+ @Test public void singleRootNode(){
     BinaryTree tree=new BinaryTree();
     tree.root = new Node(10);
    tree.preOrder(tree.root);
@@ -29,13 +29,14 @@ public class AppTest {
     @Test public void addLeftChild(){
         BinaryTree tree=new BinaryTree();
         tree.root = new Node(10);
+        tree.root.left = new Node(40);
         tree.preOrder(tree.root);
         tree.inOrder(tree.root);
         tree.postOrder(tree.root);
-        BinarySearchTree treee=new BinarySearchTree();
-        treee.root = new Node(10);
+//        BinarySearchTree treee=new BinarySearchTree();
+//        treee.root = new Node(10);
 //        treee.add(treee.root, 40);
-assertEquals("BinaryTree{preOrderstoredArray=[10, 40], inorderStoredArray=[10, 40], postOrderstoredArray=[10, 40]}",treee.toString());
+assertEquals("BinaryTree{preOrderstoredArray=[10, 40], inorderStoredArray=[40, 10], postOrderstoredArray=[40, 10]}",tree.toString());
     }
     @Test public void  preorderTraversalAndInorderTraversalAndPostorderTraversal(){
         BinaryTree tree = new BinaryTree();
@@ -54,7 +55,10 @@ assertEquals("BinaryTree{preOrderstoredArray=[10, 5, 3, 7, 30], inorderStoredArr
         treee.root = new Node(10);
         treee.add( 40);
         treee.add(5);
-        assertEquals("[5, 40, 10]",treee.postOrder(treee.root).toString());
+        treee.add( 4);
+        treee.add(6);
+        treee.add(8);
+        assertEquals("[8, 6, 4, 5, 40, 10]",treee.postOrder(treee.root).toString());
     }
     @Test public void CanAddLeftSingleRootNode(){
         BinarySearchTree treee = new BinarySearchTree();
@@ -93,5 +97,6 @@ assertEquals("BinaryTree{preOrderstoredArray=[10, 5, 3, 7, 30], inorderStoredArr
         treeMaximum.root.left.left.left= new Node(3);
         treeMaximum.root.left.right.left = new Node(9);
         assertEquals("[10, 53, 3330, 3, 7, 3, 9]",treeMaximum.breadthFirst(treeMaximum.root).toString());
+
     }
 }

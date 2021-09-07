@@ -1,3 +1,6 @@
+import java.util.Queue;
+import java.util.Stack;
+
 public class Linkedliist {
         Node head;
 
@@ -85,8 +88,8 @@ public class Linkedliist {
                 pointer.next = newNode;
          }
             }
-                Node newNode = new Node(number);
-                newNode.next = pointer.next;
+//                Node newNode = new Node(number);
+//                newNode.next = pointer.next;
         }
 
         public void insertAfter(int value, int number) {
@@ -132,7 +135,9 @@ public class Linkedliist {
                 current = current.next;
             }
             }
+
             return  current.value;
+
         }
     public Linkedliist linkedListZip(Linkedliist llone,Linkedliist lltow) {
         if (llone.head == null) {
@@ -212,5 +217,40 @@ public class Linkedliist {
     head = prev;
     return ll;
     }
+public int secondSolutionForKthValue(int k){
+    Stack s =new Stack();
+    Node result =null;
+    Node current = head;
+    while (current.next!=null){
+        current=current.next;
+        s.push(current);
+    }
+    for (int i = 0;i<=k;i++){
+        result=null;
+        result = (Node) s.pop();
 
     }
+        return result.value;
+}
+    public Stack second(Linkedliist ll1 ,Linkedliist ll2){
+        Stack s1=new Stack();
+        Node current1 = ll1.head;
+        Node current2=ll2.head;
+        while (current1.next !=null || current2.next!=null) {
+            if (current1.next!=null) {
+                s1.push(current1);
+                if (current1.next!=null) {
+                    current1 = current1.next;
+                }
+            }
+            if (current2.next!=null) {
+                s1.push(current2);
+                if (current1.next!=null) {
+                    current2 = current2.next;
+                }
+            }
+        }
+        return s1;
+    }
+}
+
