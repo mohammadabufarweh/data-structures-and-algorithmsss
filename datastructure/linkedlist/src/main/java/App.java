@@ -36,11 +36,12 @@ public class App {
         System.out.println(ll);
         // Insert Before  code challenge 6
         System.out.println("// Insert Before  code challenge 6-------");
-        ll.insertBefore(5,9);
+        ll.insertBefore(4,9);
         System.out.println(ll);
         // Insert After  code challenge 6
         System.out.println(" // Insert After  code challenge 6 -----------");
         ll.insertAfter(4,9);
+        System.out.println(ll);
         // Insert After  code challenge 7
 
         Linkedliist list =new Linkedliist();
@@ -49,6 +50,8 @@ public class App {
         list.add(2);
         list.add(7);
         System.out.println(" // kthValue  code challenge 7");
+        System.out.println(list.secondSolutionForKthValue(0));
+
         System.out.println(list.kthValue(1));
 //linkedListZip code challenge 8
         System.out.println("linkedListZip code challenge 8 ");
@@ -63,6 +66,7 @@ public class App {
         listtwo.add(6);
         listtwo.add(8);
         System.out.println(list.linkedListZip(listone,listtwo));
+        System.out.println(list.second(listone,listtwo));
         // reverse LinkedLis  code challenge 9
         System.out.println("reverseLinkedLis code challenge 9 ");
         System.out.println(list.reverseLinkedList(list));

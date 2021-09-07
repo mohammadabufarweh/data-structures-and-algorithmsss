@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class BinarySearchTree  extends BinaryTree{
     Node <Integer> root;
 
@@ -43,3 +45,24 @@ public void  add(int value) {
 
 
 }
+//    public ArrayList<Object> fizzBuzz(BinaryTree data) {
+//        ArrayList<Object> bfizzBuzzTreeArray = new ArrayList<Object>();
+//        while (data.root!=null){
+//            if ((int) data.root.value % 3 == 0) {
+//                data.root.value = "Fizz";
+//                bfizzBuzzTreeArray.add(data.root.value);
+//            }
+//            else if ((int) data.root.value % 5 == 0) {
+//                data.root.value = "Buzz";
+//                bfizzBuzzTreeArray.add(data.root.value);
+//            }
+//            else if ((int)data.root.value % 5 == 0 && (int)data.root.value % 3 == 0){
+//                data.root.value = "FizzBuzz";
+//                bfizzBuzzTreeArray.add(data.root.value);
+//            }
+//            else {
+//                bfizzBuzzTreeArray.add(data.root.value);
+//            }
+//        }
+//        return bfizzBuzzTreeArray;
+//    }

@@ -1,3 +1,5 @@
+import sun.reflect.generics.tree.Tree;
+
 import java.util.ArrayList;
 
 /*
@@ -28,7 +30,7 @@ public class App {
         treee.root = new Node(10);
           treee.add(40);
           treee.add(5);
-//          treee.add( 3);
+          treee.add(600);
         System.out.println(treee.postOrder(treee.root));
         System.out.println(treee.toString());
 
@@ -42,11 +44,26 @@ public class App {
         treeMaximum.root.left.right = new Node(7);
         treeMaximum.root.left.left.left= new Node(3);
         treeMaximum.root.left.right.left = new Node(9);
+
         System.out.println("----------treeMaxValue--------");
         System.out.println(treeMaximum.treeMaxValue(treeMaximum.root));
+
         System.out.println("----------breadthFirst--------");
         System.out.println(treeMaximum.breadthFirst(treeMaximum.root));
 
+        System.out.println("----------FizzBuzz--------");
+
+        BinaryTree trees = new BinaryTree();
+        trees.root = new Node(5);
+        trees.root.left = new Node(5);
+        trees.root.right = new Node(5);
+        trees.root.left.left = new Node(5);
+        trees.root.left.right = new Node(5);
+
+//        FizzBuzzTree fizzBuzzTree = new FizzBuzzTree();
+//        System.out.println(trees.preOrder(trees.root));
+//      fizzBuzzTree.fizzBuzz((BinaryTree<Object>) trees.preOrder( trees.root));
+//        fizzBuzzTree.fizzBuzz(trees.preOrder(trees.root));
     }
 
 }

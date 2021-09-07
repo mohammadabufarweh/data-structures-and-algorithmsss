@@ -3,14 +3,14 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class BinaryTree <T>  {
-    Node root;
+public class BinaryTree<T>  {
+    NodeTree root;
     public boolean isEmpty(){
          if (root == null)return false;
          return true;
     }
 List <T> preOrderstoredArray=new ArrayList<>();
-    public List<T> preOrder(Node <T> root) {
+    public List<T> preOrder(NodeTree <T> root) {
         if( root != null){
             preOrderstoredArray.add(root.value);
             if(root.left!=null){
@@ -24,7 +24,7 @@ List <T> preOrderstoredArray=new ArrayList<>();
         return preOrderstoredArray;
     }
     List <T> inorderStoredArray=new ArrayList<>();
-    public List <T> inOrder(Node <T> root){
+    public List <T> inOrder(NodeTree <T> root){
         if( root != null){
         if (root.left!=null){
             inOrder(root.left);
@@ -36,7 +36,7 @@ List <T> preOrderstoredArray=new ArrayList<>();
         return inorderStoredArray;
     }
     List <T> postOrderstoredArray=new ArrayList<>();
-    public List <T> postOrder(Node <T> root){
+    public List <T> postOrder(NodeTree <T> root){
         if( root != null) {
             if (root.left != null) {
                 postOrder(root.left);
@@ -49,7 +49,7 @@ List <T> preOrderstoredArray=new ArrayList<>();
       return postOrderstoredArray;
     }
 
-    public int treeMaxValue(Node root){
+    public int treeMaxValue(NodeTree root){
         if(root == null) {
             System.out.println("Tree is empty");
             return 0;
@@ -75,8 +75,8 @@ List <T> preOrderstoredArray=new ArrayList<>();
     }
 
 
-    public ArrayList<Integer> breadthFirst(Node root ){
-        Queue<Node> breadthFistQueue = new LinkedList<Node>();
+    public ArrayList<Integer> breadthFirst(NodeTree root ){
+        Queue<NodeTree> breadthFistQueue = new LinkedList<NodeTree>();
         ArrayList<Integer> breadthFirstStoredArray = new ArrayList<Integer>();
         if(root == null){
            return null;
@@ -84,7 +84,7 @@ List <T> preOrderstoredArray=new ArrayList<>();
             breadthFistQueue.add(root);
             breadthFirstStoredArray.add((Integer)root.value);
             while(!breadthFistQueue.isEmpty()){
-                Node saved = breadthFistQueue.remove();
+                NodeTree saved = breadthFistQueue.remove();
                 if(saved.left!=null){
                     breadthFistQueue.add(saved.left);
                     breadthFirstStoredArray.add((Integer)saved.left.value);
@@ -99,23 +99,23 @@ List <T> preOrderstoredArray=new ArrayList<>();
     }
 
 //    public void  addd(int value) {
-//        Node valueAsNode=new Node(value);
+//        NodeTree valueAsNodeTree=new NodeTree(value);
 ////        if (root.value == null) {
-////            root = new Node(value);
+////            root = new NodeTree(value);
 ////        }else{
 //        if (value <(int) root.value) {
 //            if (root.left!=null) {
 //                root.value = (Integer) root.left.value;
 //                addd(value);
 //            }else{
-//                root.left=valueAsNode;
+//                root.left=valueAsNodeTree;
 //            }
 //        } else if  (value >(int) root.value) { ;
 //            if (root.right!=null) {
 //                root.value = (Integer) root.right.value;
 //                addd(value);
 //            }else{
-//                root.right=valueAsNode;
+//                root.right=valueAsNodeTree;
 //            }
 //        }
 //    }
