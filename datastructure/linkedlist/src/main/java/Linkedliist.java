@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Queue;
 import java.util.Stack;
 
@@ -236,21 +238,40 @@ public int secondSolutionForKthValue(int k){
         Stack s1=new Stack();
         Node current1 = ll1.head;
         Node current2=ll2.head;
-        while (current1.next !=null || current2.next!=null) {
-            if (current1.next!=null) {
-                s1.push(current1);
-                if (current1.next!=null) {
+        while (current1 !=null || current2!=null) {
+            if (current1!=null) {
+                s1.push(current1.value);
                     current1 = current1.next;
-                }
             }
-            if (current2.next!=null) {
-                s1.push(current2);
-                if (current1.next!=null) {
+            if (current2!=null) {
+                s1.push(current2.value);
                     current2 = current2.next;
-                }
             }
         }
         return s1;
     }
+
+    public void ls(Linkedliist ls1){
+        Node current=head;
+//        Stack s2=new Stack();
+//        Stack s1 =new Stack();
+//        while (current!=null){
+//            s1.push(current.value);
+//            current=current.next;
+//        }
+//        while (!s1.empty()) {
+//            s2.push(s1.pop());
+//        }
+//        return s2;
+        ArrayList <Integer> arrayList = new ArrayList<Integer>();
+        while (current!=null){
+            arrayList.add(current.value);
+            current=current.next;
+        }
+        for (int i=arrayList.size()-1;i>=0;i--){
+            System.out.println(arrayList.get(i));
+        }
+    }
+
 }
 
