@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-09-08T20:54:47" hostname="DESKTOP-BOK46SC" time="0.005">
+<testsuite name="AppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-09-11T23:44:25" hostname="DESKTOP-BOK46SC" time="0.006">
   <properties/>
-  <testcase name="treeIntersection" classname="AppTest" time="0.005"/>
+  <testcase name="testLeftJoin" classname="AppTest" time="0.006"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
