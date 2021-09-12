@@ -1,9 +1,8 @@
 import java.util.*;
 
 public class Graph <T> {
-    //creating an object of the Map class that stores the edges of the graph
+
     private Map<T, List<T>> map = new HashMap<>();
-    //the method adds a new vertex to the graph
     public void addNewNode(T node)
     {
         map.put(node, new LinkedList<T>());
