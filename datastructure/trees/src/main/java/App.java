@@ -28,13 +28,17 @@ public class App {
 
         BinarySearchTree treee = new BinarySearchTree();
         treee.root = new Node(10);
-          treee.add(40);
-          treee.add(5);
-          treee.add(600);
-        System.out.println(treee.postOrder(treee.root));
-        System.out.println(treee.toString());
+        treee.add(1);
+        treee.add(40);
+//        treee.add(5);
 
-        System.out.println(treee.contain(treee.root, 10));
+//          treee.add(600);
+        System.out.println(treee.postOrder(treee.root));
+//        System.out.println(treee.toString());
+
+
+
+        //        System.out.println(treee.contain(treee.root, 10));
 
         BinaryTree treeMaximum = new BinaryTree();
         treeMaximum.root = new Node(10);
@@ -46,10 +50,10 @@ public class App {
         treeMaximum.root.left.right.left = new Node(9);
 
         System.out.println("----------treeMaxValue--------");
-        System.out.println(treeMaximum.treeMaxValue(treeMaximum.root));
+//        System.out.println(treeMaximum.treeMaxValue(treeMaximum.root));
 
         System.out.println("----------breadthFirst--------");
-        System.out.println(treeMaximum.breadthFirst(treeMaximum.root));
+//        System.out.println(treeMaximum.breadthFirst(treeMaximum.root));
 
         System.out.println("----------FizzBuzz--------");
 

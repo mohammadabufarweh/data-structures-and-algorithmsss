@@ -72,4 +72,22 @@ public class AppTest {
         String test = null;
         assertEquals("[8, 17]",hashMapTreeIntersection.treeIntersection(tree1 , tree2).toString());
     }
+    @Test public void testLeftJoin(){
+        HashTable<String> table1 = new HashTable<>(10);
+        HashTable<String> table2 = new HashTable<>(10);
+        table1.add(1, "mohammad");
+        table1.add(2, "ammar");
+        table1.add(3, "mohammad");
+        table1.add(4, "hanaa");
+        table1.add(5, "nahla");
+        table1.add(6, "java");
+
+        table2.add(1, "khaled");
+        table2.add(2, "al hariry");
+        table2.add(3, "meqdad");
+        table2.add(4, "matrouq");
+        table2.add(5, "al");
+        table2.add(6, "401");
+        assertEquals("[[1, mohammad, khaled], [2, ammar, al hariry], [3, mohammad, meqdad], [4, hanaa, matrouq], [5, nahla, al], [6, java, 401]]",new App().leftJoin(table1,table2).toString());
+    }
 }

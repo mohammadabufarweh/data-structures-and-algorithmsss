@@ -1,11 +1,18 @@
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
+import java.util.*;
 
 
 public class HashTable <T>{
     Node[] arr;
+    private ArrayList<T> bucketArray;
+
+    public ArrayList<T> getBucketArray(int i) {
+        return bucketArray;
+    }
+
+    public Node[] getArr() {
+        return arr;
+    }
+
     int size;
     HashTable h;
     public HashTable(int size){
