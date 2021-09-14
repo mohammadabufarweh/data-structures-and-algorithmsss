@@ -10,12 +10,12 @@ public class AppTest {
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
     }
     @Test public void  addedNodeToGraph(){
-        Graph <Integer> graph=new Graph <Integer>();
+        Graph <Integer> graph=new Graph <Integer>(10);
         graph.addNewNode(5);
         assertEquals("[5]" ,graph.getNodes());
     }
     @Test public void  addedEdgeToGraph(){
-        Graph <Integer> graph=new Graph <Integer>();
+        Graph <Integer> graph=new Graph <Integer>(10);
         graph.addNewEdge(0, 1);
         graph.addNewEdge(0, 4);
         assertEquals("0  1 4 \n" +
@@ -24,14 +24,14 @@ public class AppTest {
                 ,graph.toString());
     }
     @Test public void collectionOfAllNodes(){
-        Graph <Integer> graph=new Graph <Integer>();
+        Graph <Integer> graph=new Graph <Integer>(10);
         graph.addNewNode(5);
         graph.addNewNode(6);
         graph.addNewNode(7);
         assertEquals("[5, 6, 7]" ,graph.getNodes());
     }
     @Test public void neighbors(){
-        Graph <Integer> graph=new Graph <Integer>();
+        Graph <Integer> graph=new Graph <Integer>(15);
         graph.addNewEdge(0, 1);
         graph.addNewEdge(0, 4);
         graph.addNewEdge(1, 2);
@@ -45,7 +45,7 @@ public class AppTest {
         assertEquals("0 2 3 4 ",graph.getNeighbors(1));
     }
     @Test public void umberOfNodes(){
-        Graph <Integer> graph=new Graph <Integer>();
+        Graph <Integer> graph=new Graph <Integer>(10);
         graph.addNewEdge(0, 1);
         graph.addNewEdge(0, 4);
         graph.addNewEdge(1, 2);
@@ -56,11 +56,23 @@ public class AppTest {
         graph.addNewEdge(3, 0);
         graph.addNewEdge(2, 0);
         graph.addNewNode(5);
-
-        assertEquals("6",graph.size());
+String ans="6";
+        assertEquals(6,graph.size());
     }
     @Test public void emptyGraph() {
-        Graph<Integer> graph = new Graph<Integer>();
+        Graph<Integer> graph = new Graph<Integer>(10);
         assertEquals(null,graph.toString());
+    }
+    @Test public void breadthFirst(){
+        Graph g = new Graph(4);
+
+        g.addEdge(0, 1);
+        g.addEdge(0, 2);
+        g.addEdge(1, 2);
+        g.addEdge(2, 0);
+        g.addEdge(2, 3);
+        g.addEdge(3, 3);
+
+        assertEquals("[2, 0, 3, 1]", g.breadthFirst(2).toString());
     }
 }

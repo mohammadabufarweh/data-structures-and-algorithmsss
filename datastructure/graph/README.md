@@ -64,3 +64,7 @@ A graph is a data structure that stores connected data. In other words, a graph 
 - Space--->O(1)*   
 
 
+
+# Code Challenge 36
+
+![36.jpg](./36.jpg)

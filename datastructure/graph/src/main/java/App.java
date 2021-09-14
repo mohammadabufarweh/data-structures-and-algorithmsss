@@ -9,8 +9,8 @@ public class App {
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
 
-//
-        Graph <Integer> graph=new Graph <Integer>();
+
+        Graph <Integer> graph=new Graph <Integer>(10);
 graph.addNewEdge(0, 1);
 graph.addNewEdge(0, 4);
 graph.addNewEdge(1, 2);
@@ -23,8 +23,21 @@ graph.addNewEdge(2, 0);
 graph.addNewNode(5);
         System.out.println(graph.getNodes());
 
-System.out.println("Adjacency List for the graph:\n"+ graph.toString());
+  System.out.println("Adjacency List for the graph:\n"+ graph.toString());
         System.out.println(graph.getNeighbors(1));
         System.out.println("number of nodes "+graph.size());
+
+
+
+        Graph g = new Graph(4);
+
+        g.addEdge(0, 1);
+        g.addEdge(0, 2);
+        g.addEdge(1, 2);
+        g.addEdge(2, 0);
+        g.addEdge(2, 3);
+        g.addEdge(3, 3);
+
+        System.out.println(g.breadthFirst(2));
     }
 }

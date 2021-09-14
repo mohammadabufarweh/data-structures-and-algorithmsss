@@ -61,4 +61,48 @@ public class Graph <T> {
     {
     return map.keySet().size();
     }
+
+
+    private int V;
+    private LinkedList<Integer> adj[];
+
+    Graph(int v) {
+        V = v;
+        adj = new LinkedList[v];
+        for (int i=0; i<v; ++i)
+            adj[i] = new LinkedList();
+    }
+
+    void addEdge(int v,int w)
+    {
+        adj[v].add(w);
+    }
+
+   public List breadthFirst(int rootNode)
+    {
+        boolean visited[] = new boolean[V];
+        LinkedList<Integer> ll = new LinkedList<Integer>();
+        visited[rootNode]=true;
+        ll.add(rootNode);
+        List l =new ArrayList();
+        while (ll.size() != 0)
+        {
+            rootNode = ll.poll();
+            l.add(rootNode);
+            Iterator<Integer> i = adj[rootNode].listIterator();
+            while (i.hasNext())
+            {
+                int n = i.next();
+                if (!visited[n])
+                {
+                    visited[n] = true;
+                    ll.add(n);
+                }
+            }
+        }
+        return l;
+    }
+
+
 }
+
