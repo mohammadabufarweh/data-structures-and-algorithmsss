@@ -46,12 +46,11 @@ public class App {
         treeMaximum.root.right = new Node(3330);
         treeMaximum.root.left.left = new Node(3);
         treeMaximum.root.left.right = new Node(7);
-        treeMaximum.root.left.left.left= new Node(3);
-        treeMaximum.root.left.right.left = new Node(9);
+
 
         System.out.println("----------treeMaxValue--------");
-//        System.out.println(treeMaximum.treeMaxValue(treeMaximum.root));
-
+        System.out.println(treeMaximum.treeMaxValue(treeMaximum.root));
+//
         System.out.println("----------breadthFirst--------");
 //        System.out.println(treeMaximum.breadthFirst(treeMaximum.root));
 
@@ -64,8 +63,8 @@ public class App {
         trees.root.left.left = new Node(5);
         trees.root.left.right = new Node(5);
 
-//        FizzBuzzTree fizzBuzzTree = new FizzBuzzTree();
-//        System.out.println(trees.preOrder(trees.root));
+        FizzBuzzTree fizzBuzzTree = new FizzBuzzTree();
+        System.out.println(trees.preOrder(trees.root));
 //      fizzBuzzTree.fizzBuzz((BinaryTree<Object>) trees.preOrder( trees.root));
 //        fizzBuzzTree.fizzBuzz(trees.preOrder(trees.root));
     }

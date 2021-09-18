@@ -48,18 +48,21 @@ List <T> preOrderstoredArray=new ArrayList<>();
         }
       return postOrderstoredArray;
     }
-
+    int p=0;
     public int treeMaxValue(Node root){
         if(root == null) {
             System.out.println("Tree is empty");
             return 0;
         }
         else{
+            System.out.println("counter   "+p++);
             int leftMax;
             int rightMax;
             int max = (int) root.value;
+            System.out.println("max  "+max);
             if(root.left != null){
-                leftMax = treeMaxValue(root.left);
+                leftMax = treeMaxValue(root.left);//10  53
+                System.out.println("left  "+leftMax);
                 if(max<leftMax){
                     max=leftMax;
                 }

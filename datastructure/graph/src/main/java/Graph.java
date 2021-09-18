@@ -1,8 +1,12 @@
+import javax.swing.*;
 import java.util.*;
 
 public class Graph <T> {
 
     private Map<T, List<T>> map = new HashMap<>();
+
+
+
     public void addNewNode(T node)
     {
         map.put(node, new LinkedList<T>());
@@ -104,5 +108,62 @@ public class Graph <T> {
     }
 
 
+    // code challenge 37
+    static class Edge
+    {
+        String source;
+        String destination;
+        int  weight;
+        Edge(String source, String destination,int weight)
+        {
+            this.source = source;
+            this.destination = destination;
+            this.weight=weight;
+        }
+    }
+
+    static class Graphh {
+        int couter=0;
+        List<List<Integer>> allNodes = new ArrayList<>();
+        LinkedList w= new LinkedList();
+        public  Graphh(List<Edge> edges) {
+            int n = 0;
+            for (Edge e : edges) {
+                n = Integer.max(n, Integer.max(Integer.parseInt(e.source), Integer.parseInt(e.destination)));
+            }
+            for (int i = 0; i <= n; i++) {
+                allNodes.add(i, new ArrayList<>());
+            }
+            for (Edge current : edges) {
+                allNodes.get(Integer.parseInt(current.source)).add(Integer.valueOf(current.destination));
+                w.add(current.weight);
+            }
+        }
+
+        public static  String businessTrip(Graphh graph) {
+
+            int s = 0;
+            int s2=0;
+            int l =0;
+            int n = graph.allNodes.size();
+            while (s < n) {
+                for (int d : graph.allNodes.get(s)) {
+                    graph.couter++;
+                    l=d;
+                }
+                s++;
+                if(l==s){
+                   s2++;
+                }
+            }
+                if (s2 == graph.couter){
+                    return "true";
+                }
+            return "false";
+        }
+    }
+
+    // end for code challenge 37
 }
+
 
