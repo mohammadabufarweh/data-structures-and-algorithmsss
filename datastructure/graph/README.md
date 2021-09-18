@@ -72,3 +72,7 @@ A graph is a data structure that stores connected data. In other words, a graph 
 # Code Challenge 37
 
 ![Untitled-copy-21.jpg](./Untitled-copy-21.jpg)
+
+# Code Challenge 38
+
+![Untitled-copy-22.jpg](./Untitled-copy-22.jpg)

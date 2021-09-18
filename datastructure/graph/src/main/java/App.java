@@ -57,5 +57,23 @@ graph.addNewNode(5);
         }
         System.out.println(res+"$");
 
+
+
+        DepthFirstSearch depthFirstSearch = new DepthFirstSearch(10);
+//add edges to the graph
+        depthFirstSearch.addNewEdge(1, 2);
+        depthFirstSearch.addNewEdge(2, 3);
+        depthFirstSearch.addNewEdge(3, 4);
+        depthFirstSearch.addNewEdge(4, 5);
+        depthFirstSearch.addNewEdge(5, 7);
+        depthFirstSearch.addNewEdge(1, 3);
+        depthFirstSearch.addNewEdge(1, 5);
+        depthFirstSearch.addNewEdge(5, 5);
+        depthFirstSearch.addNewEdge(2, 6);
+        depthFirstSearch.addNewEdge(3, 7);
+
+        System.out.println("Depth-first traversal of graph is: ");
+//traversal starts from the node 3 (as root node)
+        depthFirstSearch.depthFirst(1);
     }
 }
